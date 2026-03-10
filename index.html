@@ -1,28 +1,10 @@
 <!DOCTYPE html>
-<!--
-GitHub Pages ready single-file homepage.
-Recommended repo structure:
-/
-  index.html
-  /assets/img/hero.jpg
-  /assets/img/gallery-1.jpg
-  /assets/img/gallery-2.jpg
-  /assets/img/gallery-3.jpg
-  /files/CV_MingQiangLiang.pdf
-
-Usage:
-1. Create a GitHub repository named <your-username>.github.io
-2. Upload this file as index.html
-3. Upload your images into assets/img/
-4. Upload your CV into files/
-5. Enable GitHub Pages in repository settings if needed
--->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ming-Qiang Liang | Academic Homepage</title>
-  <meta name="description" content="A minimalist academic homepage inspired by clean research portfolio websites." />
+  <meta name="description" content="Academic homepage of Ming-Qiang Liang" />
   <style>
     :root {
       --bg: #ffffff;
@@ -37,6 +19,7 @@ Usage:
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: var(--sans);
@@ -339,8 +322,6 @@ Usage:
       font-size: 0.92rem;
     }
 
-    .muted { color: var(--muted); }
-
     @media (max-width: 900px) {
       .hero-grid,
       .section-head,
@@ -384,11 +365,11 @@ Usage:
   <header class="site-header">
     <div class="container nav">
       <a href="#home" class="brand">Ming-Qiang Liang</a>
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
-        <a href="#art">Figures</a>
+        <a href="#figures">Figures</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -413,10 +394,7 @@ Usage:
           <div class="quick-links">
             <a href="#publications">Selected publications</a>
             <a href="#research">Research themes</a>
-            <a href="#contact">Email</a>
-            <a href="files/CV_MingQiangLiang.pdf" target="_blank" rel="noopener">CV PDF</a>
-            <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
-            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            <a href="files/CV_MingQiangLiang.pdf" target="_blank">CV PDF</a>
           </div>
         </div>
         <div class="hero-photo">
@@ -437,31 +415,19 @@ Usage:
           <div class="research-grid">
             <article class="card">
               <h3>Heinrich Stadial hydroclimate</h3>
-              <p>
-                Investigating tropical and Asian monsoon precipitation responses during Heinrich events using proxy networks,
-                transient simulations, and targeted forcing experiments.
-              </p>
+              <p>Investigating tropical and Asian monsoon precipitation responses during Heinrich events using proxy networks, transient simulations, and targeted forcing experiments.</p>
             </article>
             <article class="card">
               <h3>Model–proxy comparison</h3>
-              <p>
-                Evaluating consistency between simulations and paleoclimate archives with agreement metrics,
-                uncertainty quantification, and regional synthesis.
-              </p>
+              <p>Evaluating consistency between simulations and paleoclimate archives with agreement metrics, uncertainty quantification, and regional synthesis.</p>
             </article>
             <article class="card">
               <h3>Single-forcing experiments</h3>
-              <p>
-                Isolating the roles of orbital forcing, greenhouse gases, ice sheets, and freshwater forcing
-                in shaping precipitation and ocean circulation.
-              </p>
+              <p>Isolating the roles of orbital forcing, greenhouse gases, ice sheets, and freshwater forcing in shaping precipitation and ocean circulation.</p>
             </article>
             <article class="card">
               <h3>Climate dynamics and mechanisms</h3>
-              <p>
-                Exploring moisture budget changes, AMOC variability, tropical circulation shifts,
-                and inter-basin teleconnections across glacial climates.
-              </p>
+              <p>Exploring moisture budget changes, AMOC variability, tropical circulation shifts, and inter-basin teleconnections across glacial climates.</p>
             </article>
           </div>
         </div>
@@ -477,36 +443,19 @@ Usage:
           <p class="lead">Selected papers and ongoing work. Replace the placeholder text with your own citations.</p>
           <div class="pub-list">
             <article class="pub-item">
-              <div class="pub-title">Liang, M.-Q., Zhang, Y., Tan, L., et al. A forcing-dependent view of tropical hydroclimate variability during Heinrich Stadials.</div>
-              <div class="pub-meta">Under review / in preparation</div>
-              <div class="pub-links">
-                <a href="https://doi.org/" target="_blank" rel="noopener">Paper</a>
-                <a href="https://doi.org/" target="_blank" rel="noopener">Preprint</a>
-                <a href="https://github.com/" target="_blank" rel="noopener">Code</a>
-              </div>
-            </article>
-            <article class="pub-item">
               <div class="pub-title">Liang, M.-Q., et al. Insolation-driven spatiotemporal climate discrepancy over the Asian monsoon region.</div>
               <div class="pub-meta">Quaternary Science Reviews</div>
-              <div class="pub-links">
-                <a href="https://doi.org/" target="_blank" rel="noopener">DOI</a>
-                <a href="files/supplement.pdf" target="_blank" rel="noopener">Supplement</a>
-              </div>
             </article>
             <article class="pub-item">
-              <div class="pub-title">Proxy–model synthesis of precipitation responses across tropical monsoon regions during abrupt climate events.</div>
+              <div class="pub-title">Liang, M.-Q., Zhang, Y., Tan, L., et al. A forcing-dependent view of tropical hydroclimate variability during Heinrich Stadials.</div>
               <div class="pub-meta">In preparation</div>
-              <div class="pub-links">
-                <a href="files/abstract.pdf" target="_blank" rel="noopener">Abstract</a>
-                <a href="files/slides.pdf" target="_blank" rel="noopener">Slides</a>
-              </div>
             </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="art">
+    <section id="figures">
       <div class="container section-head">
         <div>
           <h2 class="section-title">Figures</h2>
@@ -546,10 +495,6 @@ Usage:
               My recent work integrates global and regional climate models with paleoclimate archives,
               emphasizing moisture-budget diagnostics, forcing decomposition, and rigorous model–data evaluation.
             </p>
-            <p>
-              This template is intentionally minimalist and inspired by clean academic portfolio sites.
-              You can expand it with project pages, teaching, datasets, blog posts, or a full CV.
-            </p>
           </div>
           <aside class="cv-box">
             <h3>At a glance</h3>
@@ -558,7 +503,6 @@ Usage:
               <li>Institution: UCLouvain</li>
               <li>Field: Paleoclimate / Climate Dynamics</li>
               <li>Focus: Heinrich Stadials, Monsoon, AMOC</li>
-              <li>Tools: NCL, MATLAB, Python, CDO, HPC</li>
             </ul>
           </aside>
         </div>
@@ -580,10 +524,6 @@ Usage:
               <span>Office</span>
               <span>Department / University / City</span>
             </div>
-            <div class="contact-item">
-              <span>Profiles</span>
-              <span><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a> / <a href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a> / <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> / <a href="https://www.researchgate.net/" target="_blank" rel="noopener">ResearchGate</a></span>
-            </div>
           </div>
         </div>
       </div>
@@ -592,27 +532,12 @@ Usage:
 
   <footer class="site-footer">
     <div class="container">
-      © <span id="year"></span> Ming-Qiang Liang. Built as a minimalist academic homepage template inspired by clean research portfolio websites.
+      © <span id="year"></span> Ming-Qiang Liang
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    const sections = document.querySelectorAll('main section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
-          });
-        }
-      });
-    }, { threshold: 0.35 });
-
-    sections.forEach(section => observer.observe(section));
   </script>
 </body>
 </html>
