@@ -4,52 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ming-Qiang Liang | Academic Homepage</title>
-  <meta name="description" content="Academic homepage of Ming-Qiang Liang" />
+  <meta name="description" content="Ming-Qiang Liang's academic homepage on paleoclimate modeling, Heinrich Stadials, and Asian monsoon variability." />
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --muted: #666666;
-      --line: #e8e8e8;
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
       --accent: #1f4e79;
-      --maxw: 1080px;
-      --serif: Georgia, "Times New Roman", Times, serif;
-      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --accent-2: #0f766e;
+      --maxw: 1120px;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --radius: 18px;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
-      font-family: var(--sans);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
       background: var(--bg);
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     a {
-      color: inherit;
+      color: var(--accent);
       text-decoration: none;
     }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a:hover { text-decoration: underline; }
 
     .container {
-      width: min(92%, var(--maxw));
+      width: min(var(--maxw), calc(100% - 2rem));
       margin: 0 auto;
     }
 
-    .site-header {
+    .topbar {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.94);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+      background: rgba(247, 248, 250, 0.88);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.85);
     }
 
     .nav {
@@ -61,484 +58,444 @@
     }
 
     .brand {
-      font-family: var(--serif);
-      font-size: 1.3rem;
+      font-weight: 700;
       letter-spacing: 0.2px;
+      color: var(--text);
       white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 1.4rem;
+      gap: 1.2rem;
       flex-wrap: wrap;
-      font-size: 0.96rem;
-      color: var(--muted);
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 0.98rem;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
+    .nav-links a {
       color: var(--text);
+      opacity: 0.88;
     }
 
     .hero {
-      padding: 3rem 0 2.5rem;
-      border-bottom: 1px solid var(--line);
+      padding: 3.5rem 0 2.2rem;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.78rem;
-      margin-bottom: 0.85rem;
-    }
-
-    h1, h2, h3 {
-      font-family: var(--serif);
-      font-weight: 500;
-      line-height: 1.2;
-      margin: 0 0 0.9rem;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      margin: 0 0 1rem;
-      color: #222;
-      max-width: 62ch;
-      font-size: 1.02rem;
-    }
-
-    .hero-photo {
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
-      border-radius: 2px;
-      background: #f5f5f5;
-      border: 1px solid var(--line);
-    }
-
-    .hero-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .quick-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem 1.1rem;
-      margin-top: 1.4rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .quick-links a {
-      border-bottom: 1px solid transparent;
-    }
-
-    .quick-links a:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-
-    section {
-      padding: 4rem 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: 220px 1fr;
+      grid-template-columns: 300px 1fr;
       gap: 2rem;
       align-items: start;
     }
 
-    .section-title {
-      position: sticky;
-      top: 96px;
-      font-size: 1.65rem;
+    .profile-card,
+    .content-card,
+    .research-card,
+    .pub-card,
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
-    .section-body {
-      min-width: 0;
+    .profile-card {
+      padding: 1.6rem;
+      position: sticky;
+      top: 96px;
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 1.2rem;
+      border: 4px solid #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .name {
+      text-align: center;
+      margin: 0;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+
+    .title, .affiliation {
+      text-align: center;
+      color: var(--muted);
+      margin: 0.4rem 0;
+    }
+
+    .mini-links {
+      margin-top: 1.2rem;
+      display: grid;
+      gap: 0.7rem;
+      font-size: 0.95rem;
+    }
+
+    .mini-links a,
+    .mini-links span {
+      padding: 0.65rem 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fcfcfd;
+      display: block;
+      color: var(--text);
+    }
+
+    .content-stack {
+      display: grid;
+      gap: 1.4rem;
+    }
+
+    .content-card,
+    .contact-card {
+      padding: 1.6rem 1.7rem;
+    }
+
+    h2.section-title {
+      margin: 0 0 0.8rem;
+      font-size: 1.35rem;
+      color: var(--text);
     }
 
     .lead {
+      font-size: 1.02rem;
+      color: #374151;
+      margin-bottom: 0.9rem;
+    }
+
+    .twocol {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .list-clean {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .section {
+      padding: 0.4rem 0 0.2rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-header p {
+      margin: 0;
       color: var(--muted);
-      margin-top: -0.2rem;
-      margin-bottom: 1.6rem;
+      font-size: 0.96rem;
     }
 
     .research-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.2rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
     }
 
-    .card {
-      border: 1px solid var(--line);
-      padding: 1.2rem 1.15rem;
-      background: #fff;
+    .research-card {
+      overflow: hidden;
     }
 
-    .card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.6rem;
+    .research-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+      background: linear-gradient(135deg, #dbeafe, #dcfce7);
     }
 
-    .card p {
+    .research-body {
+      padding: 1rem 1rem 1.1rem;
+    }
+
+    .research-body h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.06rem;
+      line-height: 1.35;
+    }
+
+    .research-body p {
       margin: 0;
       color: var(--muted);
-      font-size: 0.97rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     .pub-list {
       display: grid;
-      gap: 1.25rem;
+      gap: 0.9rem;
     }
 
-    .pub-item {
-      padding-bottom: 1.15rem;
-      border-bottom: 1px solid var(--line);
+    .pub-card {
+      padding: 1rem 1.1rem;
     }
 
-    .pub-item:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .pub-title {
-      font-size: 1.06rem;
-      margin-bottom: 0.35rem;
+    .pub-card strong {
+      display: inline-block;
+      margin-bottom: 0.25rem;
     }
 
     .pub-meta {
       color: var(--muted);
       font-size: 0.95rem;
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.35rem;
     }
 
     .pub-links {
       display: flex;
-      gap: 1rem;
+      gap: 0.9rem;
       flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.94rem;
     }
 
-    .pub-links a:hover {
-      color: var(--accent);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 2rem;
-      align-items: start;
-    }
-
-    .cv-box {
-      border: 1px solid var(--line);
-      padding: 1.15rem;
-      background: #fcfcfc;
-    }
-
-    .cv-box h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.7rem;
-    }
-
-    .cv-box ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .cv-box li {
-      padding: 0.45rem 0;
-      border-bottom: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .cv-box li:last-child {
-      border-bottom: 0;
-    }
-
-    .gallery-grid {
+    .contact-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.9rem;
-    }
-
-    .gallery-grid figure {
-      margin: 0;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      border: 1px solid var(--line);
-    }
-
-    .gallery-grid figcaption {
-      margin-top: 0.45rem;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 0.75rem;
-      max-width: 540px;
+      gap: 1rem;
+      margin-top: 0.7rem;
     }
 
     .contact-item {
-      display: grid;
-      grid-template-columns: 90px 1fr;
-      gap: 0.8rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--line);
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fcfcfd;
     }
 
-    .contact-item span:first-child {
+    .contact-item h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+    }
+
+    .contact-item p {
+      margin: 0;
       color: var(--muted);
+      font-size: 0.95rem;
+      word-break: break-word;
     }
 
-    .site-footer {
+    footer {
       padding: 2rem 0 3rem;
       color: var(--muted);
       font-size: 0.92rem;
+      text-align: center;
     }
 
-    @media (max-width: 900px) {
+    .tag {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: #eef6ff;
+      color: var(--accent);
+      font-size: 0.84rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+      border: 1px solid #d8e8fb;
+    }
+
+    @media (max-width: 960px) {
       .hero-grid,
-      .section-head,
-      .about-grid {
+      .twocol,
+      .research-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .section-title {
+      .profile-card {
         position: static;
       }
 
-      .research-grid,
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 2rem;
-      }
-    }
-
-    @media (max-width: 640px) {
       .nav {
-        align-items: flex-start;
-        padding: 1rem 0;
+        padding: 0.7rem 0;
+        align-items: start;
         flex-direction: column;
-      }
-
-      .nav-links {
-        gap: 0.9rem 1rem;
-      }
-
-      .contact-item {
-        grid-template-columns: 1fr;
-        gap: 0.2rem;
       }
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
+  <header class="topbar">
     <div class="container nav">
-      <a href="#home" class="brand">Ming-Qiang Liang</a>
+      <a class="brand" href="#home">Ming-Qiang Liang</a>
       <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
-        <a href="#figures">Figures</a>
-        <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Paleoclimate • Climate Dynamics • Hydroclimate</div>
-          <h1>Academic homepage with a clean, minimalist research style.</h1>
-          <p>
-            I am a Ph.D. researcher working on paleoclimate dynamics, hydroclimate variability,
-            and model–proxy comparisons across Heinrich Stadials and orbital to millennial timescales.
-          </p>
-          <p>
-            My research combines climate-model experiments, proxy synthesis, and quantitative analysis
-            to investigate how greenhouse gases, ice sheets, meltwater forcing, and orbital changes shape
-            tropical and Asian monsoon precipitation.
-          </p>
-          <div class="quick-links">
-            <a href="#publications">Selected publications</a>
-            <a href="#research">Research themes</a>
-            <a href="files/CV_MingQiangLiang.pdf" target="_blank">CV PDF</a>
-          </div>
-        </div>
-        <div class="hero-photo">
-          <img src="assets/img/hero.png" alt="Research cover image" />
-        </div>
-      </div>
-    </section>
+  <main id="home" class="hero">
+    <div class="container hero-grid">
+      <aside class="profile-card">
+        <img class="avatar" src="assets/img/profile.jpg" alt="Profile photo" />
+        <h1 class="name">Ming-Qiang Liang</h1>
+        <p class="title">Ph.D. Candidate</p>
+        <p class="affiliation">Earth and Life Institute, UCLouvain</p>
 
-    <section id="research">
-      <div class="container section-head">
-        <div>
-          <h2 class="section-title">Research</h2>
+        <div class="mini-links">
+          <a href="mailto:ming-qiang.liang@uclouvain.be">ming-qiang.liang@uclouvain.be</a>
+          <a href="https://www.researchgate.net/profile/Ming-Qiang-Liang/" target="_blank" rel="noopener">ResearchGate</a>
+          <a href="https://github.com/Lmq041" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://orcid.org/my-orcid?orcid=0000-0003-3348-135X" target="_blank" rel="noopener">ORCID</a>
+          <span>Belgium</span>
         </div>
-        <div class="section-body">
+      </aside>
+
+      <div class="content-stack">
+        <section class="content-card">
+          <h2 class="section-title">Biography</h2>
           <p class="lead">
-            A few core themes that structure my current work in paleoclimate reconstruction and climate-model analysis.
+            I am a Ph.D. candidate at UCLouvain working on paleoclimate dynamics, climate-model experiments,
+            and proxy–model comparisons. My research focuses on Heinrich Stadials, Asian monsoon hydroclimate,
+            AMOC variability, and the distinct impacts of orbital, greenhouse-gas, ice-sheet, and freshwater forcing.
           </p>
+          <p>
+            I combine climate-model simulations, paleoclimate reconstructions, and statistical analysis to investigate
+            how abrupt climate events reorganized tropical and subtropical hydroclimate. My current work includes
+            transient and sensitivity experiments, multi-model synthesis, and manuscript preparation for high-impact journals.
+          </p>
+
+          <div class="twocol">
+            <div>
+              <h2 class="section-title" style="font-size:1.08rem; margin-top:0.3rem;">Interests</h2>
+              <div>
+                <span class="tag">Paleoclimate Modeling</span>
+                <span class="tag">Heinrich Stadials</span>
+                <span class="tag">Asian Monsoon Dynamics</span>
+                <span class="tag">AMOC Dynamics</span>
+                <span class="tag">Proxy–Model Comparison</span>
+                <span class="tag">Hydroclimate Variability</span>
+              </div>
+            </div>
+            <div>
+              <h2 class="section-title" style="font-size:1.08rem; margin-top:0.3rem;">Education</h2>
+              <ul class="list-clean">
+                <li><strong>Ph.D. in Climate / Paleoclimate</strong>, UCLouvain</li>
+                <li><strong>M.Sc.</strong>, National Taiwan University</li>
+                <li><strong>B.Sc.</strong>, Southwest University</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="research" class="section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Research</h2>
+              <p>Three featured topics in a layout inspired by junhu.info.</p>
+            </div>
+          </div>
+
           <div class="research-grid">
-            <article class="card">
-              <h3>Heinrich Stadial hydroclimate</h3>
-              <p>Investigating tropical and Asian monsoon precipitation responses during Heinrich events using proxy networks, transient simulations, and targeted forcing experiments.</p>
+            <article class="research-card">
+              <img class="research-thumb" src="assets/img/research1.jpg" alt="Research topic 1" />
+              <div class="research-body">
+                <h3>Heinrich Stadials and Tropical Hydroclimate</h3>
+                <p>Investigating spatiotemporal precipitation responses during Heinrich events using proxy networks and model simulations.</p>
+              </div>
             </article>
-            <article class="card">
-              <h3>Model–proxy comparison</h3>
-              <p>Evaluating consistency between simulations and paleoclimate archives with agreement metrics, uncertainty quantification, and regional synthesis.</p>
+
+            <article class="research-card">
+              <img class="research-thumb" src="assets/img/research2.jpg" alt="Research topic 2" />
+              <div class="research-body">
+                <h3>Single-Forcing Climate Experiments</h3>
+                <p>Separating the climatic effects of orbital forcing, greenhouse gases, ice sheets, and freshwater perturbations.</p>
+              </div>
             </article>
-            <article class="card">
-              <h3>Single-forcing experiments</h3>
-              <p>Isolating the roles of orbital forcing, greenhouse gases, ice sheets, and freshwater forcing in shaping precipitation and ocean circulation.</p>
-            </article>
-            <article class="card">
-              <h3>Climate dynamics and mechanisms</h3>
-              <p>Exploring moisture budget changes, AMOC variability, tropical circulation shifts, and inter-basin teleconnections across glacial climates.</p>
+
+            <article class="research-card">
+              <img class="research-thumb" src="assets/img/research3.jpg" alt="Research topic 3" />
+              <div class="research-body">
+                <h3>Proxy–Model Agreement and Mechanisms</h3>
+                <p>Using model–data comparison, moisture-budget analysis, and robust statistics to test paleoclimate mechanisms.</p>
+              </div>
             </article>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section id="publications">
-      <div class="container section-head">
-        <div>
-          <h2 class="section-title">Publications</h2>
-        </div>
-        <div class="section-body">
-          <p class="lead">Selected papers and ongoing work. Replace the placeholder text with your own citations.</p>
+        <section id="publications" class="section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Selected Publications</h2>
+              <p>Replace these entries with your own papers, preprints, and code links.</p>
+            </div>
+            <a href="#">See all publications</a>
+          </div>
+
           <div class="pub-list">
-            <article class="pub-item">
-              <div class="pub-title">Liang, M.-Q., et al. Insolation-driven spatiotemporal climate discrepancy over the Asian monsoon region.</div>
-              <div class="pub-meta">Quaternary Science Reviews</div>
+            <article class="pub-card">
+              <strong>Liang, M.-Q.</strong>, Coauthor A, Coauthor B (2026). Title of your paper on Heinrich-event hydroclimate variability. <em>Journal Name</em>.
+              <div class="pub-meta">Keywords: paleoclimate, monsoon, abrupt climate change</div>
+              <div class="pub-links">
+                <a href="#">PDF</a>
+                <a href="#">Article</a>
+                <a href="#">Code</a>
+              </div>
             </article>
-            <article class="pub-item">
-              <div class="pub-title">Liang, M.-Q., Zhang, Y., Tan, L., et al. A forcing-dependent view of tropical hydroclimate variability during Heinrich Stadials.</div>
-              <div class="pub-meta">In preparation</div>
+
+            <article class="pub-card">
+              <strong>Liang, M.-Q.</strong>, Coauthor A, Coauthor B (2025). Title of your paper on insolation-driven climate discrepancy over East Asia. <em>Quaternary Science Reviews</em>.
+              <div class="pub-meta">Keywords: East Asia, insolation, hydroclimate</div>
+              <div class="pub-links">
+                <a href="#">PDF</a>
+                <a href="#">Article</a>
+              </div>
+            </article>
+
+            <article class="pub-card">
+              <strong>Liang, M.-Q.</strong>, Coauthor A, Coauthor B (2025). Title of your manuscript on proxy–model comparison during Heinrich Stadials. <em>Journal Name</em>.
+              <div class="pub-meta">Keywords: proxy–model comparison, AMOC, moisture budget</div>
+              <div class="pub-links">
+                <a href="#">Preprint</a>
+                <a href="#">Dataset</a>
+                <a href="#">Code</a>
+              </div>
             </article>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section id="figures">
-      <div class="container section-head">
-        <div>
-          <h2 class="section-title">Figures</h2>
-        </div>
-        <div class="section-body">
-          <p class="lead">This section can hold field photos, figures, maps, or artistic visualizations related to your research.</p>
-          <div class="gallery-grid">
-            <figure>
-              <img src="assets/img/gallery-1.jpg" alt="Gallery image 1" />
-              <figcaption>Fieldwork / landscape placeholder</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/img/gallery-2.jpg" alt="Gallery image 2" />
-              <figcaption>Research figure placeholder</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/img/gallery-3.jpg" alt="Gallery image 3" />
-              <figcaption>Conference / artwork placeholder</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container section-head">
-        <div>
-          <h2 class="section-title">About</h2>
-        </div>
-        <div class="section-body about-grid">
-          <div>
-            <p>
-              I am a doctoral researcher interested in paleoclimate dynamics, transient simulations,
-              monsoon hydroclimate, and the physical mechanisms behind abrupt climate change.
-            </p>
-            <p>
-              My recent work integrates global and regional climate models with paleoclimate archives,
-              emphasizing moisture-budget diagnostics, forcing decomposition, and rigorous model–data evaluation.
-            </p>
-          </div>
-          <aside class="cv-box">
-            <h3>At a glance</h3>
-            <ul>
-              <li>Position: Ph.D. Candidate</li>
-              <li>Institution: UCLouvain</li>
-              <li>Field: Paleoclimate / Climate Dynamics</li>
-              <li>Focus: Heinrich Stadials, Monsoon, AMOC</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container section-head">
-        <div>
+        <section id="contact" class="contact-card">
           <h2 class="section-title">Contact</h2>
-        </div>
-        <div class="section-body">
-          <div class="contact-list">
+          <p class="lead">You can use this section exactly as-is for GitHub Pages. Update the placeholders before publishing.</p>
+          <div class="contact-grid">
             <div class="contact-item">
-              <span>Email</span>
-              <span><a href="mailto:yourname@university.edu">yourname@university.edu</a></span>
+              <h3>Email</h3>
+              <p>your.email@uclouvain.be</p>
             </div>
             <div class="contact-item">
-              <span>Office</span>
-              <span>Department / University / City</span>
+              <h3>Office / Institution</h3>
+              <p>Earth and Life Institute, UCLouvain, Belgium</p>
+            </div>
+            <div class="contact-item">
+              <h3>Profiles</h3>
+              <p>Google Scholar · ORCID · GitHub · ResearchGate</p>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
+    </div>
   </main>
 
-  <footer class="site-footer">
+  <footer>
     <div class="container">
-      © <span id="year"></span> Ming-Qiang Liang
+      © 2026 Ming-Qiang Liang. Last updated: March 2026.
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-
