@@ -10,6 +10,8 @@ The existing static website is preserved. A verified publication database genera
 
 Production automation is **off until the author confirms the PR and sets `PUBLICATIONS_AUTOMATION_ENABLED=true`**. Original CV, paper and image assets are retained.
 
+Scheduled publication checks run **once a month, on the 1st at 09:17 Europe/Brussels**. Manual runs remain available.
+
 ## Local use
 
 CI uses Python 3.12 and Node.js 24. Dependencies and third-party Actions are pinned.

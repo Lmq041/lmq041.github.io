@@ -49,7 +49,7 @@
 - `templates/index.html`：原 HTML 的模板，原 CSS 与无关内容保持不变。
 - `templates/cv-content.json`、`templates/fonts/`：完整 CV 静态内容和有许可的可嵌入 DejaVu Serif 字体。
 - `assets/CV/Mingqiang_Liang_CV.pdf`：长期固定地址的可搜索完整 CV。
-- `.github/workflows/update-publications.yml`：每周、手动、PR 和主分支验证与显式 Pages 部署。
+- `.github/workflows/update-publications.yml`：每月、手动、PR 和主分支验证与显式 Pages 部署（作者于 2026-10-26 将定期检查从每周调整为每月一次）。
 - `.github/dependabot.yml`、`requirements.txt`：依赖固定与更新提醒。
 - `tests/`：迁移、身份、故障、幂等、CV、链接和工作流测试及原版对照。
 - `monitor/`：可选免费独立监测及恢复程序，默认关闭。

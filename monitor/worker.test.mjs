@@ -18,10 +18,18 @@ test('disabled configuration performs no network access', async () => {
   assert.equal((await watch({ ENABLED: 'false' }, f.fetcher, now)).action, 'disabled');
   assert.equal(f.calls.length, 0);
 });
-test('healthy weekly run produces no dispatch', async () => {
-  const f = fake('active', [{ event: 'schedule', status: 'completed', conclusion: 'success', created_at: '2026-10-20T07:20:00Z' }]);
+test('healthy monthly run produces no dispatch after 25 days', async () => {
+  const f = fake('active', [{ event: 'schedule', status: 'completed', conclusion: 'success', created_at: '2026-10-01T07:17:00Z' }]);
   assert.equal((await watch(env, f.fetcher, now)).action, 'healthy');
   assert.equal(f.calls.length, 2);
+});
+test('monthly fallback allows a long month but dispatches after 33 days', async () => {
+  const f = fake('active', [{ event: 'schedule', status: 'completed', conclusion: 'success', created_at: '2026-09-24T12:00:00Z' }]);
+  assert.equal((await watch(env, f.fetcher, now)).action, 'healthy');
+  assert.equal(f.calls.length, 2);
+  const stale = fake('active', [{ event: 'schedule', status: 'completed', conclusion: 'success', created_at: '2026-09-22T12:00:00Z' }]);
+  assert.equal((await watch(env, stale.fetcher, now)).action, 'fallback-dispatched');
+  assert.equal(stale.calls[2].method, 'POST');
 });
 test('inactivity-disable is enabled and dispatched once', async () => {
   const f = fake('disabled_inactivity', []);
