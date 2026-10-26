@@ -9,7 +9,7 @@
 - `assets/CV/260310_Mingqiang_Liang_CV.pdf` 共三页，是无可提取文字的 PDF。已将三页全部渲染并逐页阅读。原文件按字节保留，测试核对 SHA-256。
 - CV 除主页三篇论文外，还包含其他论文及一项预印本，共 12 个已有 DOI 条目。另有原 CV 已公开的 In Preparation 条目，作为静态 CV 内容保留，不用于论文发现，也不发送给元数据 API。
 - CV 非论文内容包括姓名、职位、机构、邮箱、网站、Research Interests、三段 Education 与论文题目及导师、三项 Awards、Funding Awards、五项口头报告、两项海报、三段 Research Experience、Technical Skills、Academic Service。均已重建在 `templates/cv-content.json`。
-- 公开 Actions 历史显示原始版本由 GitHub 管理的 `dynamic/pages/pages-build-deployment` 工作流成功部署，运行 ID `22957173855`。仓库中没有自定义部署工作流。未认证的 Pages 配置接口返回 404，因此具体后台设置仍需认证后核对，不能把该响应误判为没有 Pages。
+- 公开 Actions 历史显示原始版本由 GitHub 管理的 `dynamic/pages/pages-build-deployment` 工作流成功部署，运行 ID `22957173855`。认证后的 Pages API 已确认 `build_type=legacy`，来源为 `main` 分支根目录，状态 `built`。未认证时该接口返回 404，不能把该响应误判为没有 Pages。当前设置尚未修改。
 - 2026-10-26 读取公开分支 API，`main.protected=false`。以后若启用分支保护或规则集，需重新验证机器人能否写入，不能默认保持可用。
 
 ## 三篇主页论文迁移
