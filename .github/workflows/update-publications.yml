@@ -1,0 +1,169 @@
+name: Update publications and CV
+
+on:
+  schedule:
+    - cron: '17 9 * * 1'
+      timezone: 'Europe/Brussels'
+  workflow_dispatch:
+    inputs:
+      sync:
+        description: Fetch live public metadata (otherwise offline validation)
+        type: boolean
+        default: true
+      publish:
+        description: Publish after successful tests (requires enabled variable and default branch)
+        type: boolean
+        default: false
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: academic-homepage-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
+  cancel-in-progress: false
+
+env:
+  TZ: Europe/Brussels
+  PYTHONDONTWRITEBYTECODE: '1'
+
+jobs:
+  prepare:
+    if: github.event_name != 'schedule' || vars.PUBLICATIONS_AUTOMATION_ENABLED == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      publish: ${{ steps.changes.outputs.publish }}
+      changed: ${{ steps.changes.outputs.changed }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548 # v6.1.0
+        with:
+          python-version: '3.12.12'
+      - uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version: '24.19.0'
+      - name: Install pinned dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Validate offline before network access
+        run: python -m unittest discover -s tests -v
+      - name: Validate optional independent watchdog
+        run: node --test monitor/worker.test.mjs
+      - name: Discover and verify publications
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.sync) || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          ORCID_READ_PUBLIC_TOKEN: ${{ secrets.ORCID_READ_PUBLIC_TOKEN }}
+        run: python scripts/sync_publications.py --report work/sync-report.json
+      - name: Generate only when public content has changed
+        run: python scripts/build.py --stage _site
+      - name: Validate resulting site and complete CV
+        run: python -m unittest discover -s tests -v
+      - name: Decide whether there is a real change
+        id: changes
+        env:
+          ENABLED: ${{ vars.PUBLICATIONS_AUTOMATION_ENABLED }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          PUBLISH_REQUEST: ${{ inputs.publish }}
+        shell: bash
+        run: |
+          changed=false
+          if ! git diff --quiet -- data/publications.json data/pending-publications.json data/build-state.json index.html assets/CV/Mingqiang_Liang_CV.pdf; then changed=true; fi
+          publish=false
+          if [[ "$ENABLED" == true && "$GITHUB_REF" == "refs/heads/$DEFAULT_BRANCH" ]]; then
+            if [[ "$GITHUB_EVENT_NAME" == push || ( "$changed" == true && "$GITHUB_EVENT_NAME" == schedule ) || ( "$GITHUB_EVENT_NAME" == workflow_dispatch && "$PUBLISH_REQUEST" == true ) ]]; then publish=true; fi
+          fi
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+          echo "publish=$publish" >> "$GITHUB_OUTPUT"
+          echo "Validated content. Source changes: $changed; deployment requested: $publish" >> "$GITHUB_STEP_SUMMARY"
+      - name: Package Pages site
+        if: steps.changes.outputs.publish == 'true'
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
+        with:
+          path: _site
+      - name: Preserve generated source for post-deployment commit
+        if: steps.changes.outputs.publish == 'true' && steps.changes.outputs.changed == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: generated-source
+          path: |
+            data/publications.json
+            data/pending-publications.json
+            data/build-state.json
+            index.html
+            assets/CV/Mingqiang_Liang_CV.pdf
+          retention-days: 7
+      - name: Keep diagnostic evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: sync-diagnostics
+          path: work/sync-report.json
+          if-no-files-found: ignore
+          retention-days: 30
+
+  deploy:
+    needs: prepare
+    if: needs.prepare.outputs.publish == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - name: Reject stale builds before deployment
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: test "$(git ls-remote origin "refs/heads/$DEFAULT_BRANCH" | cut -f1)" = "$GITHUB_SHA"
+      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
+      - name: Deploy the tested artifact explicitly
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+      - name: Download tested generated source
+        if: needs.prepare.outputs.changed == 'true'
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: generated-source
+      - name: Commit only after successful publication
+        if: needs.prepare.outputs.changed == 'true'
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/publications.json data/pending-publications.json data/build-state.json index.html assets/CV/Mingqiang_Liang_CV.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update verified publications, homepage and complete CV'
+            git push origin "HEAD:$DEFAULT_BRANCH"
+          fi
+
+  monitor:
+    needs: [prepare, deploy]
+    if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && vars.PUBLICATIONS_AUTOMATION_ENABLED == 'true' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    permissions: {}
+    steps:
+      - name: Signal success or failure to independent optional monitor
+        env:
+          HEALTHCHECKS_URL: ${{ secrets.HEALTHCHECKS_URL }}
+          PREPARE_RESULT: ${{ needs.prepare.result }}
+          DEPLOY_RESULT: ${{ needs.deploy.result }}
+        shell: bash
+        run: |
+          if [[ -z "$HEALTHCHECKS_URL" ]]; then
+            echo 'Independent missed-run monitoring is not configured.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          suffix=/fail
+          if [[ "$PREPARE_RESULT" == success && ( "$DEPLOY_RESULT" == success || "$DEPLOY_RESULT" == skipped ) ]]; then suffix=''; fi
+          curl --fail --silent --show-error --max-time 20 --retry 2 --output /dev/null "${HEALTHCHECKS_URL}${suffix}"

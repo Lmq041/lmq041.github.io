@@ -1,0 +1,1694 @@
+{
+  "schema_version": 1,
+  "author": {
+    "name": "Ming-Qiang Liang",
+    "orcid": "0000-0003-3348-135X",
+    "openalex_id": "https://openalex.org/A5103046078"
+  },
+  "records": [
+    {
+      "id": "doi:10.1016/j.apgeochem.2023.105706",
+      "doi": "10.1016/j.apgeochem.2023.105706",
+      "metadata": {
+        "title": "Quantifying source effects based on rainwater δ18O from 10-year monitoring records in Southwest China",
+        "authors": [
+          {
+            "given": "Yan-Xia",
+            "family": "Xue",
+            "ORCID": "https://orcid.org/0000-0002-0363-1372"
+          },
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Zhen",
+            "family": "Su"
+          },
+          {
+            "given": "Yao",
+            "family": "Wu"
+          },
+          {
+            "given": "Qi-sheng",
+            "family": "Liang"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Xiang-Zhuo",
+            "family": "Liu"
+          },
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Hai-Ying",
+            "family": "Qiu"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          }
+        ],
+        "journal": "Applied Geochemistry",
+        "year": 2023,
+        "volume": "155",
+        "issue": "",
+        "pages": "105706",
+        "article_number": "105706",
+        "publication_date": "2023-08",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1016/j.apgeochem.2023.105706",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 6,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": false,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "original CV"
+        ]
+      },
+      "manual": {
+        "title": "Quantifying source effects based on rainwater δ18O from 10-year monitoring records in Southwest China",
+        "authors": [
+          {
+            "given": "Yan-Xia",
+            "family": "Xue",
+            "ORCID": "https://orcid.org/0000-0002-0363-1372"
+          },
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Zhen",
+            "family": "Su"
+          },
+          {
+            "given": "Yao",
+            "family": "Wu"
+          },
+          {
+            "given": "Qi-sheng",
+            "family": "Liang"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Xiang-Zhuo",
+            "family": "Liu"
+          },
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Hai-Ying",
+            "family": "Qiu"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          }
+        ],
+        "year": 2023,
+        "publication_type": "journal-article",
+        "my_author_position": 6,
+        "show_on_homepage": false
+      },
+      "provenance": {
+        "migration_source": "assets/CV/260310_Mingqiang_Liang_CV.pdf",
+        "crossref_retrieved": "2026-10-26"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.atmosres.2026.108830",
+      "doi": "10.1016/j.atmosres.2026.108830",
+      "metadata": {
+        "title": "Coupled influence of Western Pacific moisture anomalies and mid-tropospheric humidity on October precipitation in Yunnan Province Southwest China",
+        "authors": [
+          {
+            "given": "Wen-Jun",
+            "family": "Sun"
+          },
+          {
+            "given": "Zhen-Peng",
+            "family": "Tao"
+          },
+          {
+            "given": "Zi-Yang",
+            "family": "Zhang"
+          },
+          {
+            "given": "Tian-Qing",
+            "family": "Lan"
+          },
+          {
+            "given": "Taohui",
+            "family": "Li"
+          },
+          {
+            "given": "Peng",
+            "family": "Zi"
+          },
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Yao",
+            "family": "Wu"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Yuan-Yuan",
+            "family": "Mu"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          }
+        ],
+        "journal": "Atmospheric Research",
+        "year": 2026,
+        "volume": "336",
+        "issue": "",
+        "pages": "108830",
+        "article_number": "108830",
+        "publication_date": "2026-06",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1016/j.atmosres.2026.108830",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 9,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": false,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "original CV"
+        ]
+      },
+      "manual": {
+        "title": "Coupled influence of Western Pacific moisture anomalies and mid-tropospheric humidity on October precipitation in Yunnan Province Southwest China",
+        "authors": [
+          {
+            "given": "Wen-Jun",
+            "family": "Sun"
+          },
+          {
+            "given": "Zhen-Peng",
+            "family": "Tao"
+          },
+          {
+            "given": "Zi-Yang",
+            "family": "Zhang"
+          },
+          {
+            "given": "Tian-Qing",
+            "family": "Lan"
+          },
+          {
+            "given": "Taohui",
+            "family": "Li"
+          },
+          {
+            "given": "Peng",
+            "family": "Zi"
+          },
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Yao",
+            "family": "Wu"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Yuan-Yuan",
+            "family": "Mu"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          }
+        ],
+        "year": 2026,
+        "publication_type": "journal-article",
+        "my_author_position": 9,
+        "show_on_homepage": false
+      },
+      "provenance": {
+        "migration_source": "assets/CV/260310_Mingqiang_Liang_CV.pdf",
+        "crossref_retrieved": "2026-10-26"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.chemgeo.2023.121802",
+      "doi": "10.1016/j.chemgeo.2023.121802",
+      "metadata": {
+        "title": "Data-model comparisons of isotopic and hydrological variabilities of the karstic vadose zone above Villars Cave, SW-France based on 20 years' monitoring record",
+        "authors": [
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Dominique",
+            "family": "Genty"
+          },
+          {
+            "given": "Colette",
+            "family": "Sirieix"
+          },
+          {
+            "given": "Cécile",
+            "family": "Verdet"
+          },
+          {
+            "given": "Sylvain",
+            "family": "Mateo"
+          },
+          {
+            "given": "Ludovic",
+            "family": "Devaux"
+          },
+          {
+            "given": "Giovanni",
+            "family": "Sgubin"
+          },
+          {
+            "given": "Stéphane",
+            "family": "Bujan"
+          },
+          {
+            "given": "Bénédicte",
+            "family": "Minster"
+          },
+          {
+            "given": "Edouard",
+            "family": "Régnier"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          },
+          {
+            "given": "François",
+            "family": "Bourges"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Chaojun",
+            "family": "Chen"
+          },
+          {
+            "given": "Vincent",
+            "family": "Marieu"
+          }
+        ],
+        "journal": "Chemical Geology",
+        "year": 2023,
+        "volume": "642",
+        "issue": "",
+        "pages": "121802",
+        "article_number": "121802",
+        "publication_date": "2023-12",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1016/j.chemgeo.2023.121802",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 13,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": false,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "original CV"
+        ]
+      },
+      "manual": {
+        "title": "Data-model comparisons of isotopic and hydrological variabilities of the karstic vadose zone above Villars Cave, SW-France based on 20 years' monitoring record",
+        "authors": [
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Dominique",
+            "family": "Genty"
+          },
+          {
+            "given": "Colette",
+            "family": "Sirieix"
+          },
+          {
+            "given": "Cécile",
+            "family": "Verdet"
+          },
+          {
+            "given": "Sylvain",
+            "family": "Mateo"
+          },
+          {
+            "given": "Ludovic",
+            "family": "Devaux"
+          },
+          {
+            "given": "Giovanni",
+            "family": "Sgubin"
+          },
+          {
+            "given": "Stéphane",
+            "family": "Bujan"
+          },
+          {
+            "given": "Bénédicte",
+            "family": "Minster"
+          },
+          {
+            "given": "Edouard",
+            "family": "Régnier"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          },
+          {
+            "given": "François",
+            "family": "Bourges"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Chaojun",
+            "family": "Chen"
+          },
+          {
+            "given": "Vincent",
+            "family": "Marieu"
+          }
+        ],
+        "year": 2023,
+        "publication_type": "journal-article",
+        "my_author_position": 13,
+        "show_on_homepage": false
+      },
+      "provenance": {
+        "migration_source": "assets/CV/260310_Mingqiang_Liang_CV.pdf",
+        "crossref_retrieved": "2026-10-26"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.gloplacha.2025.105115",
+      "doi": "10.1016/j.gloplacha.2025.105115",
+      "metadata": {
+        "title": "The variation of the East Asian summer monsoon on multi-centennial scale during 8.3–2.9 ka BP",
+        "authors": [
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Ya-Xi",
+            "family": "Dong"
+          },
+          {
+            "given": "Yao",
+            "family": "Wu"
+          },
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Hai-Bo",
+            "family": "Wang"
+          },
+          {
+            "given": "Yan-Xia",
+            "family": "Xue"
+          },
+          {
+            "given": "Wen-Jun",
+            "family": "Sun"
+          },
+          {
+            "given": "Man-Ping",
+            "family": "Xie"
+          },
+          {
+            "given": "Hai",
+            "family": "Cheng"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          }
+        ],
+        "journal": "Global and Planetary Change",
+        "year": 2025,
+        "volume": "255",
+        "issue": "",
+        "pages": "105115",
+        "article_number": "105115",
+        "publication_date": "2025-12",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1016/j.gloplacha.2025.105115",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 11,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": true,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "existing homepage"
+        ]
+      },
+      "manual": {
+        "title": "The variation of the East Asian summer monsoon on multi-centennial scale during 8.3–2.9 ka BP",
+        "authors": [
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Ya-Xi",
+            "family": "Dong"
+          },
+          {
+            "given": "Yao",
+            "family": "Wu"
+          },
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Hai-Bo",
+            "family": "Wang"
+          },
+          {
+            "given": "Yan-Xia",
+            "family": "Xue"
+          },
+          {
+            "given": "Wen-Jun",
+            "family": "Sun"
+          },
+          {
+            "given": "Man-Ping",
+            "family": "Xie"
+          },
+          {
+            "given": "Hai",
+            "family": "Cheng"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          }
+        ],
+        "year": 2025,
+        "publication_type": "journal-article",
+        "my_author_position": 11,
+        "show_on_homepage": true,
+        "keywords": [
+          "Asian summer monsoon",
+          "Mid-Holocene",
+          "Centennial scale",
+          "Antarctic meltwater"
+        ],
+        "local_pdf": "assets/papers/Liang2025_midHocene.pdf",
+        "corresponding_author": true,
+        "contribution_note": "Corresponding authors"
+      },
+      "provenance": {
+        "migration_source": "index.html",
+        "crossref_retrieved": "2026-10-26"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.quascirev.2022.107420",
+      "doi": "10.1016/j.quascirev.2022.107420",
+      "metadata": {
+        "title": "Asian-Australian monsoon evolution over the last millennium linked to ENSO in composite stalagmite δ18O records",
+        "authors": [
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          },
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          }
+        ],
+        "journal": "Quaternary Science Reviews",
+        "year": 2022,
+        "volume": "281",
+        "issue": "",
+        "pages": "107420",
+        "article_number": "107420",
+        "publication_date": "2022-04",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1016/j.quascirev.2022.107420",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 2,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": true,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "existing homepage"
+        ]
+      },
+      "manual": {
+        "title": "Asian-Australian monsoon evolution over the last millennium linked to ENSO in composite stalagmite δ18O records",
+        "authors": [
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          },
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          }
+        ],
+        "year": 2022,
+        "publication_type": "journal-article",
+        "my_author_position": 2,
+        "show_on_homepage": true,
+        "keywords": [
+          "Asian-Australian monsoon",
+          "Stalagmite δ18O",
+          "ENSO"
+        ],
+        "local_pdf": "assets/papers/Liang2022_enso_monsoon.pdf",
+        "co_first_author": true,
+        "contribution_note": "co-first author"
+      },
+      "provenance": {
+        "migration_source": "index.html",
+        "crossref_retrieved": "2026-10-26"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.quascirev.2022.107869",
+      "doi": "10.1016/j.quascirev.2022.107869",
+      "metadata": {
+        "title": "Variations in Asian summer monsoon and hydroclimate during Heinrich stadials 4 revealed by stalagmite stable isotopes and trace elements",
+        "authors": [
+          {
+            "given": "Yao",
+            "family": "Wu",
+            "ORCID": "https://orcid.org/0000-0002-3865-4670"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          },
+          {
+            "given": "Hai",
+            "family": "Cheng"
+          },
+          {
+            "given": "You-Feng",
+            "family": "Ning"
+          },
+          {
+            "given": "Chuan-Chou",
+            "family": "Shen"
+          },
+          {
+            "given": "Yan",
+            "family": "Yang"
+          },
+          {
+            "given": "Jing-Yao",
+            "family": "Zhao"
+          },
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Si-Ya",
+            "family": "Xiao"
+          },
+          {
+            "given": "Hai-Ying",
+            "family": "Qiu"
+          },
+          {
+            "given": "Yu-Zhen",
+            "family": "Xu"
+          },
+          {
+            "given": "Yang-Yang",
+            "family": "Huang"
+          },
+          {
+            "given": "Tsai-Luen",
+            "family": "Yu"
+          },
+          {
+            "given": "R. Lawrence",
+            "family": "Edwards"
+          }
+        ],
+        "journal": "Quaternary Science Reviews",
+        "year": 2023,
+        "volume": "299",
+        "issue": "",
+        "pages": "107869",
+        "article_number": "107869",
+        "publication_date": "2023-01",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1016/j.quascirev.2022.107869",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 10,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": false,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "original CV"
+        ]
+      },
+      "manual": {
+        "title": "Variations in Asian summer monsoon and hydroclimate during Heinrich stadials 4 revealed by stalagmite stable isotopes and trace elements",
+        "authors": [
+          {
+            "given": "Yao",
+            "family": "Wu",
+            "ORCID": "https://orcid.org/0000-0002-3865-4670"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          },
+          {
+            "given": "Hai",
+            "family": "Cheng"
+          },
+          {
+            "given": "You-Feng",
+            "family": "Ning"
+          },
+          {
+            "given": "Chuan-Chou",
+            "family": "Shen"
+          },
+          {
+            "given": "Yan",
+            "family": "Yang"
+          },
+          {
+            "given": "Jing-Yao",
+            "family": "Zhao"
+          },
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Si-Ya",
+            "family": "Xiao"
+          },
+          {
+            "given": "Hai-Ying",
+            "family": "Qiu"
+          },
+          {
+            "given": "Yu-Zhen",
+            "family": "Xu"
+          },
+          {
+            "given": "Yang-Yang",
+            "family": "Huang"
+          },
+          {
+            "given": "Tsai-Luen",
+            "family": "Yu"
+          },
+          {
+            "given": "R. Lawrence",
+            "family": "Edwards"
+          }
+        ],
+        "year": 2023,
+        "publication_type": "journal-article",
+        "my_author_position": 10,
+        "show_on_homepage": false
+      },
+      "provenance": {
+        "migration_source": "assets/CV/260310_Mingqiang_Liang_CV.pdf",
+        "crossref_retrieved": "2026-10-26"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.quascirev.2024.108946",
+      "doi": "10.1016/j.quascirev.2024.108946",
+      "metadata": {
+        "title": "Distinct response of Asian summer monsoon circulation and precipitation to orbital forcing during six Heinrich events",
+        "authors": [
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang",
+            "ORCID": "https://orcid.org/0000-0003-3348-135X"
+          },
+          {
+            "given": "Qiuzhen",
+            "family": "Yin",
+            "ORCID": "https://orcid.org/0000-0002-7189-8335"
+          },
+          {
+            "given": "Yong",
+            "family": "Sun"
+          },
+          {
+            "given": "Chao",
+            "family": "Zhang",
+            "ORCID": "https://orcid.org/0000-0001-6888-1885"
+          },
+          {
+            "given": "André",
+            "family": "Berger"
+          },
+          {
+            "given": "Anqi",
+            "family": "Lyu"
+          },
+          {
+            "given": "Wei",
+            "family": "Liu",
+            "ORCID": "https://orcid.org/0000-0003-2824-9978"
+          },
+          {
+            "given": "Zhipeng",
+            "family": "Wu",
+            "ORCID": "https://orcid.org/0000-0002-4542-9949"
+          }
+        ],
+        "journal": "Quaternary Science Reviews",
+        "year": 2024,
+        "volume": "344",
+        "issue": "",
+        "pages": "108946",
+        "article_number": "108946",
+        "publication_date": "2024-11",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1016/j.quascirev.2024.108946",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 1,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": true,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "existing homepage"
+        ]
+      },
+      "manual": {
+        "title": "Distinct response of Asian summer monsoon circulation and precipitation to orbital forcing during six Heinrich events",
+        "authors": [
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang",
+            "ORCID": "https://orcid.org/0000-0003-3348-135X"
+          },
+          {
+            "given": "Qiuzhen",
+            "family": "Yin",
+            "ORCID": "https://orcid.org/0000-0002-7189-8335"
+          },
+          {
+            "given": "Yong",
+            "family": "Sun"
+          },
+          {
+            "given": "Chao",
+            "family": "Zhang",
+            "ORCID": "https://orcid.org/0000-0001-6888-1885"
+          },
+          {
+            "given": "André",
+            "family": "Berger"
+          },
+          {
+            "given": "Anqi",
+            "family": "Lyu"
+          },
+          {
+            "given": "Wei",
+            "family": "Liu",
+            "ORCID": "https://orcid.org/0000-0003-2824-9978"
+          },
+          {
+            "given": "Zhipeng",
+            "family": "Wu",
+            "ORCID": "https://orcid.org/0000-0002-4542-9949"
+          }
+        ],
+        "year": 2024,
+        "publication_type": "journal-article",
+        "my_author_position": 1,
+        "show_on_homepage": true,
+        "keywords": [
+          "Heinrich events",
+          "Asian summer monsoon",
+          "Paleoclimate simulation",
+          "Moisture budget",
+          "Causal analysis"
+        ],
+        "local_pdf": "assets/papers/Liang2024_orbital_monsson.pdf"
+      },
+      "provenance": {
+        "migration_source": "index.html",
+        "crossref_retrieved": "2026-10-26"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.quascirev.2025.109438",
+      "doi": "10.1016/j.quascirev.2025.109438",
+      "metadata": {
+        "title": "Upstream moisture sources and circulation patterns controls Asian monsoon hydroclimate over the past 20,000 years",
+        "authors": [
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li",
+            "ORCID": "https://orcid.org/0000-0001-9830-1976"
+          },
+          {
+            "given": "Yao",
+            "family": "Wu",
+            "ORCID": "https://orcid.org/0009-0001-5577-0999"
+          },
+          {
+            "given": "Yan-Xia",
+            "family": "Xue",
+            "ORCID": "https://orcid.org/0000-0002-0363-1372"
+          },
+          {
+            "given": "Wen-Jun",
+            "family": "Sun",
+            "ORCID": "https://orcid.org/0000-0002-8428-8173"
+          },
+          {
+            "given": "Xiang-Zhuo",
+            "family": "Liu"
+          },
+          {
+            "given": "Jin-Ke",
+            "family": "Chen"
+          },
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li",
+            "ORCID": "https://orcid.org/0000-0003-1236-3354"
+          }
+        ],
+        "journal": "Quaternary Science Reviews",
+        "year": 2025,
+        "volume": "363",
+        "issue": "",
+        "pages": "109438",
+        "article_number": "109438",
+        "publication_date": "2025-09",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1016/j.quascirev.2025.109438",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 2,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": false,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "original CV"
+        ]
+      },
+      "manual": {
+        "title": "Upstream moisture sources and circulation patterns controls Asian monsoon hydroclimate over the past 20,000 years",
+        "authors": [
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li",
+            "ORCID": "https://orcid.org/0000-0001-9830-1976"
+          },
+          {
+            "given": "Yao",
+            "family": "Wu",
+            "ORCID": "https://orcid.org/0009-0001-5577-0999"
+          },
+          {
+            "given": "Yan-Xia",
+            "family": "Xue",
+            "ORCID": "https://orcid.org/0000-0002-0363-1372"
+          },
+          {
+            "given": "Wen-Jun",
+            "family": "Sun",
+            "ORCID": "https://orcid.org/0000-0002-8428-8173"
+          },
+          {
+            "given": "Xiang-Zhuo",
+            "family": "Liu"
+          },
+          {
+            "given": "Jin-Ke",
+            "family": "Chen"
+          },
+          {
+            "given": "Chao-Jun",
+            "family": "Chen"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li",
+            "ORCID": "https://orcid.org/0000-0003-1236-3354"
+          }
+        ],
+        "year": 2025,
+        "publication_type": "journal-article",
+        "my_author_position": 2,
+        "show_on_homepage": false
+      },
+      "provenance": {
+        "migration_source": "assets/CV/260310_Mingqiang_Liang_CV.pdf",
+        "crossref_retrieved": "2026-10-26"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.scib.2025.05.006",
+      "doi": "10.1016/j.scib.2025.05.006",
+      "metadata": {
+        "title": "Putting the recent 100-year of Asian summer monsoon weakening into context",
+        "authors": [
+          {
+            "given": "Jingyao",
+            "family": "Zhao"
+          },
+          {
+            "given": "Hai",
+            "family": "Cheng"
+          },
+          {
+            "given": "Liangkang",
+            "family": "Pan"
+          },
+          {
+            "given": "Kexin",
+            "family": "Wang"
+          },
+          {
+            "given": "Jiahui",
+            "family": "Cui"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Xiyu",
+            "family": "Dong"
+          },
+          {
+            "given": "Jiayu",
+            "family": "Lu"
+          },
+          {
+            "given": "Qiang",
+            "family": "Li"
+          },
+          {
+            "given": "Yan",
+            "family": "Yang"
+          }
+        ],
+        "journal": "Science Bulletin",
+        "year": 2025,
+        "volume": "70",
+        "issue": "18",
+        "pages": "2959-2962",
+        "article_number": "",
+        "publication_date": "2025-09",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1016/j.scib.2025.05.006",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 6,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": false,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "original CV"
+        ]
+      },
+      "manual": {
+        "title": "Putting the recent 100-year of Asian summer monsoon weakening into context",
+        "authors": [
+          {
+            "given": "Jingyao",
+            "family": "Zhao"
+          },
+          {
+            "given": "Hai",
+            "family": "Cheng"
+          },
+          {
+            "given": "Liangkang",
+            "family": "Pan"
+          },
+          {
+            "given": "Kexin",
+            "family": "Wang"
+          },
+          {
+            "given": "Jiahui",
+            "family": "Cui"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Xiyu",
+            "family": "Dong"
+          },
+          {
+            "given": "Jiayu",
+            "family": "Lu"
+          },
+          {
+            "given": "Qiang",
+            "family": "Li"
+          },
+          {
+            "given": "Yan",
+            "family": "Yang"
+          }
+        ],
+        "year": 2025,
+        "publication_type": "journal-article",
+        "my_author_position": 6,
+        "show_on_homepage": false
+      },
+      "provenance": {
+        "migration_source": "assets/CV/260310_Mingqiang_Liang_CV.pdf",
+        "crossref_retrieved": "2026-10-26"
+      }
+    },
+    {
+      "id": "doi:10.1029/2025gl115543",
+      "doi": "10.1029/2025gl115543",
+      "metadata": {
+        "title": "Extended Duration of Abrupt Climate Events From the Early to Late Holocene",
+        "authors": [
+          {
+            "given": "Y.",
+            "family": "Liu",
+            "ORCID": "https://orcid.org/0000-0001-9167-2459"
+          },
+          {
+            "given": "C.",
+            "family": "Hu",
+            "ORCID": "https://orcid.org/0000-0002-4821-9840"
+          },
+          {
+            "given": "Z.",
+            "family": "Hu"
+          },
+          {
+            "given": "J.",
+            "family": "Liao"
+          },
+          {
+            "given": "M.",
+            "family": "Liang"
+          },
+          {
+            "given": "Q.",
+            "family": "Yin",
+            "ORCID": "https://orcid.org/0000-0002-7189-8335"
+          }
+        ],
+        "journal": "Geophysical Research Letters",
+        "year": 2025,
+        "volume": "52",
+        "issue": "7",
+        "pages": "",
+        "article_number": "e2025GL115543",
+        "publication_date": "2025-04-02",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1029/2025gl115543",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 5,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": false,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "original CV"
+        ]
+      },
+      "manual": {
+        "title": "Extended Duration of Abrupt Climate Events From the Early to Late Holocene",
+        "authors": [
+          {
+            "given": "Y.",
+            "family": "Liu",
+            "ORCID": "https://orcid.org/0000-0001-9167-2459"
+          },
+          {
+            "given": "C.",
+            "family": "Hu",
+            "ORCID": "https://orcid.org/0000-0002-4821-9840"
+          },
+          {
+            "given": "Z.",
+            "family": "Hu"
+          },
+          {
+            "given": "J.",
+            "family": "Liao"
+          },
+          {
+            "given": "M.",
+            "family": "Liang"
+          },
+          {
+            "given": "Q.",
+            "family": "Yin",
+            "ORCID": "https://orcid.org/0000-0002-7189-8335"
+          }
+        ],
+        "year": 2025,
+        "publication_type": "journal-article",
+        "my_author_position": 5,
+        "show_on_homepage": false
+      },
+      "provenance": {
+        "migration_source": "assets/CV/260310_Mingqiang_Liang_CV.pdf",
+        "crossref_retrieved": "2026-10-26"
+      }
+    },
+    {
+      "id": "doi:10.1029/2026gl125062",
+      "doi": "10.1029/2026gl125062",
+      "metadata": {
+        "title": "High‐ and Low‐Latitude Insolation Forcing Drives the Half‐Precession Cycle in Winter Arctic Sea Ice",
+        "authors": [
+          {
+            "given": "Zhipeng",
+            "family": "Wu",
+            "ORCID": "https://orcid.org/0000-0002-4542-9949"
+          },
+          {
+            "given": "Qiuzhen",
+            "family": "Yin",
+            "ORCID": "https://orcid.org/0000-0002-7189-8335"
+          },
+          {
+            "given": "André",
+            "family": "Berger"
+          },
+          {
+            "given": "Zhengtang",
+            "family": "Guo",
+            "ORCID": "https://orcid.org/0000-0003-2259-9715"
+          },
+          {
+            "given": "Zhifeng",
+            "family": "Zhang"
+          },
+          {
+            "given": "Ming‐Qiang",
+            "family": "Liang",
+            "ORCID": "https://orcid.org/0000-0003-3348-135X"
+          },
+          {
+            "given": "Wei",
+            "family": "Liu",
+            "ORCID": "https://orcid.org/0000-0003-2824-9978"
+          }
+        ],
+        "journal": "Geophysical Research Letters",
+        "year": 2026,
+        "volume": "53",
+        "issue": "19",
+        "pages": "",
+        "article_number": "e2026GL125062",
+        "publication_date": "2026-10-05",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1029/2026gl125062",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 6,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": true,
+        "show_in_cv": true,
+        "verification_status": "verified",
+        "metadata_source": [
+          "Crossref",
+          "ORCID",
+          "OpenAlex"
+        ]
+      },
+      "manual": {}
+    },
+    {
+      "id": "doi:10.1360/tb-2022-0833",
+      "doi": "10.1360/tb-2022-0833",
+      "metadata": {
+        "title": "The effect of astronomical forcing on water cycle: Sea ice and precipitation",
+        "authors": [
+          {
+            "given": "Zhipeng",
+            "family": "Wu"
+          },
+          {
+            "given": "Qiuzhen",
+            "family": "Yin"
+          },
+          {
+            "given": "Mingqiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Zhengtang",
+            "family": "Guo"
+          },
+          {
+            "given": "Feng",
+            "family": "Shi"
+          },
+          {
+            "given": "Hao",
+            "family": "Lu"
+          },
+          {
+            "given": "Qianqian",
+            "family": "Su"
+          },
+          {
+            "given": "Anqi",
+            "family": "Lü"
+          }
+        ],
+        "journal": "Chinese Science Bulletin",
+        "year": 2022,
+        "volume": "68",
+        "issue": "12",
+        "pages": "1443-1458",
+        "article_number": "",
+        "publication_date": "2022-11-16",
+        "publication_type": "journal-article",
+        "online_url": "https://doi.org/10.1360/tb-2022-0833",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 3,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": false,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "original CV"
+        ]
+      },
+      "manual": {
+        "title": "The effect of astronomical forcing on water cycle: Sea ice and precipitation",
+        "authors": [
+          {
+            "given": "Zhipeng",
+            "family": "Wu"
+          },
+          {
+            "given": "Qiuzhen",
+            "family": "Yin"
+          },
+          {
+            "given": "Mingqiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Zhengtang",
+            "family": "Guo"
+          },
+          {
+            "given": "Feng",
+            "family": "Shi"
+          },
+          {
+            "given": "Hao",
+            "family": "Lu"
+          },
+          {
+            "given": "Qianqian",
+            "family": "Su"
+          },
+          {
+            "given": "Anqi",
+            "family": "Lü"
+          }
+        ],
+        "year": 2022,
+        "publication_type": "journal-article",
+        "my_author_position": 3,
+        "show_on_homepage": false
+      },
+      "provenance": {
+        "migration_source": "assets/CV/260310_Mingqiang_Liang_CV.pdf",
+        "crossref_retrieved": "2026-10-26"
+      }
+    },
+    {
+      "id": "doi:10.5194/cp-2021-20",
+      "doi": "10.5194/cp-2021-20",
+      "metadata": {
+        "title": "The 4.2 ka event in East Asian monsoon region, precisely reconstructed by multi-proxies of stalagmite",
+        "authors": [
+          {
+            "given": "Chao-Jun",
+            "family": "Chen",
+            "ORCID": "https://orcid.org/0000-0001-7291-4061"
+          },
+          {
+            "given": "Dao-Xian",
+            "family": "Yuan"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          },
+          {
+            "given": "Xian-Feng",
+            "family": "Wang"
+          },
+          {
+            "given": "Hai",
+            "family": "Cheng"
+          },
+          {
+            "given": "You-Feng",
+            "family": "Ning"
+          },
+          {
+            "given": "R. Lawrence",
+            "family": "Edwards"
+          },
+          {
+            "given": "Yao",
+            "family": "Wu"
+          },
+          {
+            "given": "Si-Ya",
+            "family": "Xiao"
+          },
+          {
+            "given": "Yu-Zhen",
+            "family": "Xu"
+          },
+          {
+            "given": "Yang-Yang",
+            "family": "Huang"
+          },
+          {
+            "given": "Hai-Ying",
+            "family": "Qiu"
+          },
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          }
+        ],
+        "journal": "Preprint",
+        "year": 2021,
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "article_number": "",
+        "publication_date": "2021-03-15",
+        "publication_type": "posted-content",
+        "online_url": "https://doi.org/10.5194/cp-2021-20",
+        "local_pdf": null,
+        "keywords": [],
+        "my_author_position": 14,
+        "co_first_author": false,
+        "corresponding_author": false,
+        "contribution_note": "",
+        "show_on_homepage": false,
+        "show_in_cv": true,
+        "verification_status": "manually-confirmed",
+        "metadata_source": [
+          "Crossref",
+          "original CV"
+        ]
+      },
+      "manual": {
+        "title": "The 4.2 ka event in East Asian monsoon region, precisely reconstructed by multi-proxies of stalagmite",
+        "authors": [
+          {
+            "given": "Chao-Jun",
+            "family": "Chen",
+            "ORCID": "https://orcid.org/0000-0001-7291-4061"
+          },
+          {
+            "given": "Dao-Xian",
+            "family": "Yuan"
+          },
+          {
+            "given": "Jun-Yun",
+            "family": "Li"
+          },
+          {
+            "given": "Xian-Feng",
+            "family": "Wang"
+          },
+          {
+            "given": "Hai",
+            "family": "Cheng"
+          },
+          {
+            "given": "You-Feng",
+            "family": "Ning"
+          },
+          {
+            "given": "R. Lawrence",
+            "family": "Edwards"
+          },
+          {
+            "given": "Yao",
+            "family": "Wu"
+          },
+          {
+            "given": "Si-Ya",
+            "family": "Xiao"
+          },
+          {
+            "given": "Yu-Zhen",
+            "family": "Xu"
+          },
+          {
+            "given": "Yang-Yang",
+            "family": "Huang"
+          },
+          {
+            "given": "Hai-Ying",
+            "family": "Qiu"
+          },
+          {
+            "given": "Jian",
+            "family": "Zhang"
+          },
+          {
+            "given": "Ming-Qiang",
+            "family": "Liang"
+          },
+          {
+            "given": "Ting-Yong",
+            "family": "Li"
+          }
+        ],
+        "year": 2021,
+        "publication_type": "posted-content",
+        "my_author_position": 14,
+        "show_on_homepage": false,
+        "verification_status": "legacy-confirmed"
+      },
+      "provenance": {
+        "migration_source": "assets/CV/260310_Mingqiang_Liang_CV.pdf",
+        "crossref_retrieved": "2026-10-26"
+      }
+    }
+  ]
+}
