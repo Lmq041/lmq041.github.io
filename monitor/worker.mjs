@@ -34,7 +34,8 @@ export async function watch(env, fetcher = fetch, now = Date.now()) {
   if (recent && (['queued', 'in_progress', 'waiting', 'pending'].includes(recent.status) || age(recent) < 24 * 3600e3)) {
     return { action: 'recent-run-or-in-progress' };
   }
-  if (success && age(success) < 8 * 86400e3 && workflow.state === 'active') return { action: 'healthy' };
+  // Allow a 31-day month, daylight-saving changes and a grace period before fallback.
+  if (success && age(success) < 33 * 86400e3 && workflow.state === 'active') return { action: 'healthy' };
   if (workflow.state === 'disabled_inactivity') await request(`${base}/enable`, 'PUT');
   await request(`${base}/dispatches`, 'POST', { ref: 'main', inputs: { sync: true, publish: true } });
   return { action: 'fallback-dispatched' };

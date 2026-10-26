@@ -264,7 +264,7 @@ class TestSystem(unittest.TestCase):
     def test_J_timezone_dispatch_permissions_and_deployment_gates(self):
         import yaml
         workflow=yaml.load((ROOT/'.github/workflows/update-publications.yml').read_text(encoding='utf-8'),Loader=yaml.BaseLoader)
-        self.assertEqual(workflow['on']['schedule'],[{'cron':'17 9 * * 1','timezone':'Europe/Brussels'}])
+        self.assertEqual(workflow['on']['schedule'],[{'cron':'17 9 1 * *','timezone':'Europe/Brussels'}])
         self.assertIn('workflow_dispatch',workflow['on'])
         self.assertEqual(workflow['permissions'],{'contents':'read'})
         deploy=workflow['jobs']['deploy']

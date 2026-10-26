@@ -2,11 +2,11 @@
 
 ## 正常运行
 
-每周一 **09:17，Europe/Brussels** 自动检查；夏令时由 GitHub 的时区调度处理。GitHub 可能延迟甚至丢弃定时运行，所以该时间不是实时服务保证。[GitHub 官方调度规则](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。
+每月 **1 日 09:17，Europe/Brussels** 自动检查一次；夏令时由 GitHub 的时区调度处理。GitHub 可能延迟甚至丢弃定时运行，所以该时间不是实时服务保证。[GitHub 官方调度规则](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。
 
 先读取 ORCID 公开 works，确认 OpenAlex 作者仍绑定同一个 ORCID，分页读取其作品，再用 Crossref 的 ORCID 搜索及 DOI 查询补充、验证正式书目信息。姓名相同但无可靠身份标识的记录不会新增公开。正式期刊文章通过核验后，默认同时进入主页和 CV；人工排除规则优先。数据源尚未收录的成果不会凭空出现，只有 ResearchGate 收录的论文不保证被发现。ResearchGate 只保留普通链接。
 
-同步成功后，只有公开内容指纹变化时才生成 HTML 和完整 PDF。每周没有变化时，PDF 的字节、修改时间和 Last updated 日期保持不变，也不会创建提交。版权年份由页面显示时更新，避免只为跨年创建提交。待审核区的实际变化可以形成可追踪记录，但不会改变公开内容日期。
+同步成功后，只有公开内容指纹变化时才生成 HTML 和完整 PDF。每月检查没有变化时，PDF 的字节、修改时间和 Last updated 日期保持不变，也不会创建提交。版权年份由页面显示时更新，避免只为跨年创建提交。待审核区的实际变化可以形成可追踪记录，但不会改变公开内容日期。
 
 工作流先验证、再上传明确的 Pages 文件白名单、显式部署、最后提交有效变化。不依赖机器人提交触发二次 Pages 构建，因为 GitHub 明确说明 `GITHUB_TOKEN` 提交不会触发分支式 Pages 构建。[官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
 
@@ -45,12 +45,12 @@ GitHub 官方规定：公开仓库 60 天无活动可能自动停用定时工作
 
 可选配置分两层，两者都需要作者一次性在外部服务操作，当前未启用：
 
-1. **缺运行通知：Healthchecks.io 免费检查。** 创建一个 check，周期设为 cron `17 9 * * 1`、时区 `Europe/Brussels`、宽限 24 小时，并配置邮箱通知。把该 check 的 ping URL 保存为仓库 secret `HEALTHCHECKS_URL`。工作流每次有效检查成功时 ping，失败时 `/fail`；只有状态变化才由该服务通知。只发送成功/失败信号，不发送论文或日志。免费档当前提供 20 个 checks，以服务最新条款为准。[服务说明](https://healthchecks.io/)、[配置文档](https://healthchecks.io/docs/configuring_checks/)。
-2. **独立恢复：可选 Cloudflare Workers 免费层。** `monitor/worker.mjs` 每天 UTC 11:47 检查最近运行；八天无成功检查时触发补跑，对 `disabled_inactivity` 先通过 GitHub 官方接口重新启用，再手动 dispatch。不会覆盖 `disabled_manually`，不会在 24 小时内重复触发，也不会生成保活提交。步骤：创建免费 Cloudflare 账号/Worker；上传该模块；设置 daily cron `47 11 * * *`；设置 secret `GITHUB_ACTIONS_TOKEN` 为只限本仓库、`Actions: read and write` 的 fine-grained PAT，默认 Metadata: read；不要授予 Contents: write；设置 `ENABLED=true`。`monitor/wrangler.jsonc` 是等价的默认关闭配置。无需公开 HTTP 路由。使用 Worker 日志查看执行结果。
+1. **缺运行通知：Healthchecks.io 免费检查。** 创建一个 check，周期设为 cron `17 9 1 * *`、时区 `Europe/Brussels`、宽限 24 小时，并配置邮箱通知。把该 check 的 ping URL 保存为仓库 secret `HEALTHCHECKS_URL`。工作流每次有效检查成功时 ping，失败时 `/fail`；只有状态变化才由该服务通知。只发送成功/失败信号，不发送论文或日志。免费档当前提供 20 个 checks，以服务最新条款为准。[服务说明](https://healthchecks.io/)、[配置文档](https://healthchecks.io/docs/configuring_checks/)。
+2. **独立恢复：可选 Cloudflare Workers 免费层。** `monitor/worker.mjs` 每天 UTC 11:47 检查最近运行；33 天无成功检查时触发补跑，为最长月份、夏令时变化和宽限留出时间。对 `disabled_inactivity` 先通过 GitHub 官方接口重新启用，再手动 dispatch。不会覆盖 `disabled_manually`，不会在 24 小时内重复触发，也不会生成保活提交。步骤：创建免费 Cloudflare 账号/Worker；上传该模块；设置 daily cron `47 11 * * *`；设置 secret `GITHUB_ACTIONS_TOKEN` 为只限本仓库、`Actions: read and write` 的 fine-grained PAT，默认 Metadata: read；不要授予 Contents: write；设置 `ENABLED=true`。`monitor/wrangler.jsonc` 是等价的默认关闭配置。无需公开 HTTP 路由。使用 Worker 日志查看执行结果。
 
-Cloudflare 调度使用 UTC，这与原生周一布鲁塞尔主调度是独立的兜底检查，不替代主调度。[Cron 文档](https://developers.cloudflare.com/workers/configuration/cron-triggers/)、[免费层限制](https://developers.cloudflare.com/workers/platform/pricing/)。GitHub 启用和 dispatch 接口要求 Actions 写权限。[官方接口权限](https://docs.github.com/en/rest/actions/workflows)。
+Cloudflare 调度使用 UTC，这与原生每月 1 日布鲁塞尔主调度是独立的兜底检查，不替代主调度。[Cron 文档](https://developers.cloudflare.com/workers/configuration/cron-triggers/)、[免费层限制](https://developers.cloudflare.com/workers/platform/pricing/)。GitHub 启用和 dispatch 接口要求 Actions 写权限。[官方接口权限](https://docs.github.com/en/rest/actions/workflows)。
 
-外部 token 到期或撤销、Cloudflare/Healthchecks 服务变更、免费配额、API 策略和机构账户限制仍可能导致失效。建议选择可接受的 token 有效期并保留到期提醒；不能保证技术上永久零维护。没有配置外部监测时，系统仍能正常每周运行，但无法保证停摆后主动提醒。
+外部 token 到期或撤销、Cloudflare/Healthchecks 服务变更、免费配额、API 策略和机构账户限制仍可能导致失效。建议选择可接受的 token 有效期并保留到期提醒；不能保证技术上永久零维护。没有配置外部监测时，系统仍能正常每月运行，但无法保证停摆后主动提醒。
 
 ## 回滚
 
