@@ -174,8 +174,8 @@ def content_hash(root, database):
     public.sort(key=lambda p: p['doi'])
     digest = hashlib.sha256(json.dumps(public, sort_keys=True, ensure_ascii=False).encode())
     for file in ('templates/index.html', 'templates/cv-content.json', 'scripts/build.py', 'requirements.txt'):
-        digest.update((root / file).read_bytes())
-    for file in sorted((root / 'templates/fonts').glob('*')):
+        digest.update((root / file).read_text(encoding='utf-8').encode('utf-8'))
+    for file in sorted((root / 'templates/fonts').glob('*.ttf')):
         digest.update(file.read_bytes())
     return digest.hexdigest()
 

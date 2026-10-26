@@ -229,6 +229,14 @@ class TestSystem(unittest.TestCase):
         pub.write_json(folder/'data/pending-publications.json',[{'doi':'10.5555/uncertain','reason':'identity'}])
         self.assertFalse(build.build(folder,'2027-01-04'))
 
+    def test_G_checkout_line_endings_do_not_rebuild(self):
+        folder=self.sandbox()
+        build.build(folder,'2026-10-26')
+        for name in ['templates/index.html','templates/cv-content.json','scripts/build.py','requirements.txt']:
+            file=folder/name
+            file.write_bytes(file.read_text(encoding='utf-8').replace('\n','\r\n').encode('utf-8'))
+        self.assertFalse(build.build(folder,'2027-01-04'))
+
     def test_H_non_publication_content_and_searchable_pdf(self):
         pages,checks=build.check_cv(ROOT/'assets/CV/Mingqiang_Liang_CV.pdf',self.database,pub.read_json(ROOT/'templates/cv-content.json'))
         self.assertGreater(checks,60)

@@ -15,7 +15,7 @@
 | I 网页 | 通过本地与浏览器检查 | 原 CSS、Biography/Research/Education/Contact 内容完全一致；图片与本地链接均可用；1440×1000 与 390×844，图片加载正常，无横向溢出；远程外链的长期可用性不保证 |
 | J Actions/部署 | 本地语法通过，云端待验收 | actionlint 1.7.12 无错误；YAML 中时区、手动触发、固定 SHA、权限、分支及发布开关、先部署后提交有断言；实际 PR CI、手动云端运行、正式 Pages 部署必须在认证与作者确认后验证 |
 
-核心 Python 测试：29 项通过。独立监测 Node 测试：6 项通过，包括健康无动作、停用恢复、尊重手动停用、避免重复触发和 HTTP 失败传播。
+核心 Python 测试：30 项通过，另验证跨平台行尾差异不会触发重建。独立监测 Node 测试：6 项通过，包括健康无动作、停用恢复、尊重手动停用、避免重复触发和 HTTP 失败传播。
 
 正式 API 已实际读取：ORCID public works、OpenAlex ORCID 作者及其作品、Crossref ORCID 搜索、已有 DOI 和新发现 DOI 的逐条元数据。已验证 OpenAlex 作者 `A5103046078` 的 ORCID 绑定。真实同步报告、无变化复跑日志和前后截图保留在本地交付的 verification 目录，未将完整 API 响应或任意本机材料上传。
 
