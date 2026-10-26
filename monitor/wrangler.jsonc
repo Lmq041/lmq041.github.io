@@ -1,0 +1,9 @@
+{
+  "name": "academic-homepage-watchdog",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-26",
+  "workers_dev": false,
+  "triggers": { "crons": ["47 11 * * *"] },
+  "vars": { "ENABLED": "false" },
+  "observability": { "enabled": true }
+}

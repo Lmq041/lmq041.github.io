@@ -1,0 +1,12 @@
+index.html -text whitespace=cr-at-eol
+*.py text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.mjs text eol=lf
+*.md text eol=lf
+*.ttf binary
+*.pdf binary
+templates/index.html text eol=lf -whitespace
+tests/fixtures/original-index.html -text -whitespace
+templates/fonts/LICENSE text eol=lf -whitespace
+requirements.txt text eol=lf

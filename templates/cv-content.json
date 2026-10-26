@@ -1,0 +1,99 @@
+{
+  "name": "Ming-Qiang Liang",
+  "header": [
+    "Ph.D. Candidate in Paleoclimate Dynamics",
+    "Earth and Climate Research Center, Earth and Life Institute",
+    "Université catholique de Louvain, Belgium",
+    "Email: <link href=\"mailto:mingqiang.liang@uclouvain.be\" color=\"#145c9e\">mingqiang.liang@uclouvain.be</link>",
+    "Website: <link href=\"https://lmq041.github.io/\" color=\"#145c9e\">https://lmq041.github.io/</link>"
+  ],
+  "before_publications": [
+    {
+      "heading": "Research Interests",
+      "paragraphs": [
+        "Paleoclimate modeling; Asian monsoon dynamics; AMOC variability; proxy-model comparison; Heinrich events."
+      ]
+    },
+    {
+      "heading": "Education",
+      "paragraphs": [
+        "Ph.D. Paleoclimate Dynamics, UCLouvain <b>(2026)</b>",
+        "<i>Temporal and spatial climate diversity and underlying mechanisms over East Asia during Heinrich Events 1–6 (Advisor: Prof. Qiuzhen Yin)</i>",
+        "M.S. Geoscience, National Taiwan University <b>(2021)</b>",
+        "<i>Paleoclimate evolutions during the Holocene: A multi-proxy stalagmite record from Majiaping Cave, Guizhou, China (Advisor: Prof. Hongchun Li)</i>",
+        "B.S. Geoscience, Southwest University <b>(2018)</b>",
+        "<i>Characteristics and Influencing Factors of Air Environment Variability in Furong Cave, Chongqing (Advisor: Prof. Tingyong Li)</i>"
+      ]
+    },
+    {
+      "heading": "Awards",
+      "paragraphs": [
+        "National Taiwan University Graduate Scholarship (2019–2020)",
+        "Outstanding Graduate, Southwest University (2018)",
+        "Scholarship of Southwest University (2017)"
+      ]
+    },
+    {
+      "heading": "Funding Awards",
+      "paragraphs": [
+        "Temporal and spatial climate diversity and underlying mechanisms over East Asia during Heinrich Events 1-6. <i>FNRS doctoral aspirant funding</i>: <b>Liang, M.</b>, €138,900, 01/10/2022-30/09/2026"
+      ]
+    }
+  ],
+  "in_preparation": [
+    "<b>Liang, M.</b>, Yin, Q. et al. (2026). CO2 forcing drives divergent tropical hydroclimate during Heinrich stadials."
+  ],
+  "after_publications": [
+    {
+      "heading": "Conference Presentations",
+      "subsections": [
+        {
+          "heading": "Oral Presentations",
+          "numbered": true,
+          "paragraphs": [
+            "Distinct responses of Asian summer monsoon to the Orbital forcing during the last glacial Heinrich events. <i>The 7th PAGES Open Science Meeting</i>. Shanghai, China. 2025",
+            "Distinct responses of Asian summer monsoon to the Orbital forcing during the last glacial Heinrich events. <i>EGU</i>. Vienna, Austria. 2024",
+            "Asynchronous Holocene Optimum in East Asia monsoon region recorded by stalagmites and its underlying climate dynamics. <i>XXI Congress of the International Union for Quaternary Research (INQUA)</i>. Rome, Italy. 2023",
+            "Paleoclimatic evolutions during the Holocene: A stalagmite δ18O record from Majiaping Cave, Guizhou, China. <i>EGU</i>. Vienna, Austria. 2022",
+            "The highest resolution stalagmite over Holocene in southwest China by acute 14C dating. <i>Climate Change: The Karst Record IX</i>. Innsbruck, Austria. 2021"
+          ]
+        },
+        {
+          "heading": "Poster Presentations",
+          "numbered": true,
+          "paragraphs": [
+            "Variations of ENSO linking with the intensity of Asian-Australian monsoon revealed by stalagmite and rainfall δ18O over the past millennium. <i>The 28th General Assembly of the International Union of Geodesy and Geophysics</i>. Berlin, Germany. 2023",
+            "Chronology construction of a stalagmite from southwest China by 14C, 230Th/U and 210Pb dating methods. <i>The 8th east Asia accelerator mass spectrometry symposium</i>. Nagoya, Japan. 2019"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Research Experience",
+      "paragraphs": [
+        "Sun Yat-Sen University, Guangzhou, China (2024.10)",
+        "Climate Feedback–Response Analysis Method (CFRAM)",
+        "Xiamen University, Xiamen, China (2023.02)",
+        "Isotope-enabled climate modeling",
+        "Institute of Atmospheric Physics, CAS, Beijing, China (2022.12)",
+        "Regional climate modeling (RegCM4)"
+      ]
+    },
+    {
+      "heading": "Technical Skills",
+      "paragraphs": [
+        "Climate models: HadCM3, iCESM, RegCM4.7",
+        "Programming: Matlab, Fortan, Bash, Slurm",
+        "Climate Diagnostics: Data Processing &amp; Analysis, Physical Mechanism Diagnostics, Climate Model Evaluation",
+        "Paleoclimate: Proxy, Dating, Uncertainty"
+      ]
+    },
+    {
+      "heading": "Academic Service",
+      "paragraphs": [
+        "Journal reviewer:",
+        "Quaternary Science Reviews; Climate of the Past; Climate Dynamics; Global and Planetary Change"
+      ]
+    }
+  ]
+}
